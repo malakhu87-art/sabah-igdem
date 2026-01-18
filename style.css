@@ -82,7 +82,7 @@ header p {
 }
 
 .card:hover {
-  transform: translateY(-5px) scale(1.02);
+  transform: rotate(25deg) scale(1.02);
   box-shadow: 0 15px 25px rgba(0,0,0,0.6);
   background: #333;
 }
@@ -92,7 +92,7 @@ header p {
   font-size: 28px;
   color: #00ffff; /* cyan */
   margin: 0 0 8px 0;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: color 2s ease, text-shadow 2s ease;
 }
 
 .card:hover h2 {

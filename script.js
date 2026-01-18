@@ -29,7 +29,7 @@ foods.forEach(food => {
   card.className = "card";
   card.innerHTML = `
     <h2>${food.name}</h2>
-    <div class="ingredients">🧄 المقادير: ${food.ingredients}</div>
+    <div class="ingredients"> المقادير: ${food.ingredients}</div>
   `;
   menu.appendChild(card);
 });

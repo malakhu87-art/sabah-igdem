@@ -1,0 +1,157 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Page setup ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #1f7a1f; /* خلفية خضراء صافية */
+  overflow-x: hidden;
+}
+
+/* ===== Snow canvas ===== */
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 30px 15px;
+  animation: slideDown 1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 42px;
+  margin: 0 0 10px 0;
+}
+
+header p {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.doaa {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== Menu ===== */
+#menu {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  animation: fadeIn 1.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Cards dark ===== */
+.card {
+  background: #2a2a2a; /* داكن */
+  color: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  cursor: default;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  transition: none;
+}
+
+.card:hover {
+  transform: none;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #90ee90; /* أخضر فاتح */
+  margin: 0;
+}
+
+/* ===== Ingredients ===== */
+.ingredients {
+  display: block; /* باينة دائما */
+  margin-top: 15px;
+  font-size: 20px;
+  line-height: 2;
+  background: #145214; /* أخضر غامق */
+  color: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 22px;
+  background: rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Phone adjustments ===== */
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 38px;
+  }
+
+  header p {
+    font-size: 20px;
+  }
+
+  .doaa {
+    font-size: 19px;
+  }
+
+  #menu {
+    grid-template-columns: 1fr;
+  }
+
+  .card h2 {
+    font-size: 30px;
+  }
+
+  .ingredients {
+    font-size: 21px;
+  }
+
+  footer {
+    font-size: 23px;
+  }
+}

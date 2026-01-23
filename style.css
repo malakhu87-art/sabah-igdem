@@ -147,9 +147,9 @@ header p {
   transform: scale(1.1);
   box-shadow:
     0 0 20px rgba(255, 255, 255, 0.8),
-    0 0 40px rgba(255, 255, 255, 0.6),
-    0 0 60px rgba(255, 255, 255, 0.4);
-  background: #333;
+    0 0 40px rgb(255, 255, 255),
+    0 0 60px rgb(255, 255, 255);
+  background: #000000;
 }
 
 .card h2 {
@@ -180,7 +180,7 @@ header p {
 }
 
 .card:hover .ingredients {
-  background: linear-gradient(145deg, #ffffff, #000000);
+  background: linear-gradient(145deg, #ffffff, #ffffff);
   box-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
 }
 
@@ -263,7 +263,7 @@ footer {
   border-radius: 16px;
 }
 .tips h2 {
-  color: #00ffff;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 .tips li {

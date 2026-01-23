@@ -85,9 +85,9 @@ header p {
 }
 
 #searchInput:focus {
-  background: rgba(0,255,255,0.2);
-  box-shadow: 0 0 12px #00ffff;
-  color: #00ffff;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px #ffffff;
+  color: #ffffff;
 }
 
 /* ===== Categories buttons ===== */
@@ -112,9 +112,9 @@ header p {
 }
 
 .cat-btn:hover, .cat-btn.active {
-  background: #00ffff;
+  background: #ffffff;
   color: #000;
-  box-shadow: 0 0 15px #00ffff;
+  box-shadow: 0 0 15px #ffffff;
 }
 
 /* ===== Menu / Cards Container ===== */
@@ -137,31 +137,31 @@ header p {
   padding: 22px;
   cursor: default;
   box-shadow: 
-    0 0 10px rgba(0,255,255,0.5),
-    0 0 20px rgba(0,255,255,0.4),
-    0 0 30px rgba(0,255,255,0.3);
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.1);
   box-shadow:
-    0 0 20px rgba(0,255,255,0.8),
-    0 0 40px rgba(0,255,255,0.6),
-    0 0 60px rgba(0,255,255,0.4);
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.4);
   background: #333;
 }
 
 .card h2 {
   text-align: center;
   font-size: 28px;
-  color: #00ffff;
+  color: #ffffff;
   margin: 0 0 8px 0;
   transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 .card:hover h2 {
-  text-shadow: 0 0 12px #00ffff, 0 0 20px #00ffff;
+  text-shadow: 0 0 12px #ffffff, 0 0 20px #ffffff;
 }
 
 /* Ingredients with gradient + glow */
@@ -170,18 +170,18 @@ header p {
   margin-top: 15px;
   font-size: 20px;
   line-height: 2;
-  background: linear-gradient(145deg, #008b8b, #004f4f);
-  color: #fff;
+  background: linear-gradient(145deg, #ffffff, #ffffff);
+  color: #000000;
   padding: 14px;
   border-radius: 12px;
   animation: fadeIn 0.4s ease;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px #00ffff;
+  box-shadow: 0 0 10px #ffffff;
 }
 
 .card:hover .ingredients {
-  background: linear-gradient(145deg, #00ffff, #008b8b);
-  box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+  background: linear-gradient(145deg, #ffffff, #000000);
+  box-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
 }
 
 /* ===== Footer ===== */
@@ -243,8 +243,8 @@ footer {
 .like-btn {
   margin-top: 12px;
   background: transparent;
-  border: 1px solid #00ffff;
-  color: #00ffff;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   padding: 6px 14px;
   border-radius: 20px;
   cursor: pointer;

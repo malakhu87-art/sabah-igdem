@@ -149,7 +149,7 @@ header p {
     0 0 20px rgba(255, 255, 255, 0.8),
     0 0 40px rgb(255, 255, 255),
     0 0 60px rgb(255, 255, 255);
-  background: #000000;
+  background: #333;
 }
 
 .card h2 {

@@ -155,10 +155,16 @@ const menu = document.getElementById("menu");
 foods.forEach(food => {
   const card = document.createElement("div");
   card.className = "card";
-  card.innerHTML = `
-    <h2>${food.name}</h2>
-    <div class="ingredients">🧄 المقادير: ${food.ingredients}</div>
-  `;
+  const likes = localStorage.getItem(food.name) || 0;
+
+card.innerHTML = `
+  <h2>${food.name}</h2>
+  <div class="ingredients">🧄 المقادير: ${food.ingredients}</div>
+  <button class="like-btn" data-name="${food.name}">
+    ❤️ <span>${likes}</span>
+  </button>
+`;
+
   menu.appendChild(card);
 });
 
@@ -239,8 +245,8 @@ function initParticles() {
 
 function drawParticles() {
   const gradient = ctx.createLinearGradient(0, 0, 0, h);
-  gradient.addColorStop(0, "#00ffff"); 
-  gradient.addColorStop(1, "#000000"); 
+  gradient.addColorStop(0, "#000000"); 
+  gradient.addColorStop(1, "#ffffff"); 
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, w, h);
 
@@ -252,7 +258,7 @@ function drawParticles() {
   });
   ctx.fill();
 
-  ctx.fillStyle = "#00ffff";
+  ctx.fillStyle = "#ffffff";
   ctx.beginPath();
   bubbles.forEach(b => {
     ctx.moveTo(b.x, b.y);
@@ -295,3 +301,30 @@ window.addEventListener("resize", () => {
 
 initParticles();
 animateParticles();
+document.addEventListener("click", e => {
+  if(e.target.closest(".like-btn")){
+    const span = e.target.querySelector("span");
+    span.textContent = Number(span.textContent) + 1;
+  }
+});
+let fontSize = 1;
+
+fontPlus.onclick = () => {
+  fontSize += 0.1;
+  document.body.style.fontSize = fontSize + "em";
+};
+
+fontMinus.onclick = () => {
+  fontSize -= 0.1;
+  document.body.style.fontSize = fontSize + "em";
+};
+const doaas = [
+  "اللهم بارك في هذا الرزق واجعله حلالًا طيبًا",
+  "اللهم ارزقنا رزقًا واسعًا مباركًا",
+  "اللهم أطعمنا من خيرك واكفنا بحلالك",
+  "اللهم اجعل هذا الطعام قوةً لنا على طاعتك",
+  "اللهم دم علينا نعمة الصحة والعافية"
+];
+
+const doaaEl = document.querySelector(".doaa");
+doaaEl.textContent = doaas[Math.floor(Math.random() * doaas.length)];

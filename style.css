@@ -16,7 +16,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #00ffff, #000000);
+  background: linear-gradient(to bottom, #000000, #ffffff);
   overflow-x: hidden;
   position: relative;
 }
@@ -193,6 +193,9 @@ footer {
   position: relative;
   z-index: 1;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
 /* ===== Animations ===== */
@@ -236,4 +239,33 @@ footer {
   footer {
     font-size: 23px;
   }
+}
+.like-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#fontPlus, #fontMinus {
+  margin: 5px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+.tips {
+  margin: 30px;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 16px;
+}
+.tips h2 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+.tips li {
+  line-height: 2;
 }
